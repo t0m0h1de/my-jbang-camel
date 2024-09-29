@@ -1,0 +1,13 @@
+- from:
+    uri: "kamelet:jms-pooled-apache-artemis-source"
+    parameters:
+      brokerURL: "tcp://localhost:61616"
+      destinationName: "queue-test"
+      destinationType: "queue"
+      username: "artemis"
+      password: "artemis"
+    steps:
+      - to:
+          uri: "kamelet:log-sink"
+          parameters:
+            showHeaders: true

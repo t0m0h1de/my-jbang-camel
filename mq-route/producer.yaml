@@ -1,0 +1,16 @@
+- from:
+    uri: "kamelet:timer-source"
+    parameters:
+      message: '{"id": "1", "message": "Hello Camel  by producer.yaml"}'
+      contentType: "applicaiton/json"
+      repeatCount: 10
+    steps:
+      - to:
+          uri: "kamelet:jms-pooled-apache-artemis-sink"
+          parameters:
+            brokerURL: "tcp://localhost:61616"
+            destinationName: "queue-test"
+            destinationType: "queue"
+            username: "artemis"
+            password: "artemis"
+            maxSessionsPerConnection: 1000
