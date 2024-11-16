@@ -10,7 +10,6 @@
 		"redhat.vscode-apache-camel",
 		"redhat.vscode-xml",
 		"jbangdev.jbang-vscode",
-		"redhat.vscode-camelk",
 		"redhat.vscode-debug-adapter-apache-camel"
 	],
 	// List of extensions recommended by VSCodium that should not be recommended for users of this workspace.
